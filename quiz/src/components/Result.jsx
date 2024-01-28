@@ -16,7 +16,7 @@ export default function Result(props) {
         </div>
         <div className="logo">
           <img src={Logo} alt="logo" />
-          <span>BRAINBURST</span>
+          <span>BRAINBUSTER</span>
         </div>
       </div>
       <div className="containerBox">
