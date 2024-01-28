@@ -1,0 +1,366 @@
+@font-face {
+  font-family: "Rocher";
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+body {
+  font-family: "Rocher";
+  font-palette: --Blue;
+}
+
+#large-h1 {
+  font-palette: --Purple;
+  font-size: 120px;
+}
+
+@font-palette-values --Purple {
+  font-family: Rocher;
+  base-palette: 6;
+}
+@font-palette-values --Red {
+  font-family: Rocher;
+  base-palette: 3;
+}
+@font-palette-values --Black {
+  font-family: Rocher;
+  base-palette: 2;
+}
+
+@font-palette-values --Blue {
+  font-family: Rocher;
+  base-palette: 4;
+  color: red;
+}
+@font-palette-values --Pink {
+  font-family: Rocher;
+  base-palette: 1;
+}
+
+.whole {
+  background-image: url(../assets/back.jpg);
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+}
+.homeContainer {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#Robot {
+  height: 300px;
+  width: 300px;
+  animation: moveUpDown 7s ease infinite;
+}
+.play-button {
+  height: 60px;
+  width: 400px;
+  background-color: #b699f5;
+  border: 4px solid rgb(68, 47, 112);
+  font-family: "Rocher";
+  font-palette: --Blue;
+  font-size: 40px;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.questionColor.red {
+  font-palette: --Red;
+}
+.questionColor.black {
+  font-palette: --Black;
+}
+
+.containerBox {
+  height: 88.2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.forImage {
+  transition: background-image 0.8s ease-in-out;
+}
+
+.questionBox {
+  flex: 0 0 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: rgba(0, 108, 231, 0.544);
+  border-radius: 2em;
+  height: 700px;
+  width: 500px;
+  padding: 30px;
+  transition: background-color 0.8s ease;
+}
+.questionBox.light {
+  background-color: rgb(222, 222, 23);
+  transition: background-color 0.8s ease;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.options .choose {
+  flex: 0 0 94%;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.56);
+  color: rgb(0, 0, 0);
+  border: 1px solid white;
+  border-radius: 2em;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: #52ff83c8;
+  }
+}
+
+.instruct {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.instruct button {
+  height: 40px;
+  width: 200px;
+  border-radius: 2em;
+  font-size: 18px;
+  font-family: "Rocher";
+  font-palette: --Black;
+  border: 2px solid #1effb0;
+  cursor: pointer;
+  &:hover {
+    background-color: #1effb0;
+  }
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logo img {
+  height: 70px;
+}
+.header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.logo {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.logo span {
+  font-size: 30px;
+  font-palette: --Black;
+}
+
+.toggleButton {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  background-color: #7f84fff4;
+  border: 2px solid white;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: background-color 1s ease;
+  overflow: hidden;
+}
+
+.circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url("../assets/sun.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  transition: left 0.3s ease, transform 0.8s linear;
+  transform-origin: center;
+}
+.toggleButton.light {
+  background-color: #eaec5cc6;
+}
+
+.toggleButton.light .circle {
+  left: 6px;
+  background-image: url("../assets/eclipse-alt.png");
+  transform: rotate(0deg);
+}
+
+.toggleButton.dark .circle {
+  left: calc(90% - 40px);
+  transform: rotate(90deg);
+}
+
+.toggleButton span {
+  margin-left: 20px;
+}
+.result h1 {
+  font-size: 39px;
+  font-palette: --Red;
+}
+.result h3 {
+  font-size: 32px;
+  font-palette: --Pink;
+}
+
+.result {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.result button {
+  padding: 2px;
+  width: 120px;
+  height: 40px;
+  border-radius: 0.8em;
+  font-size: 20px;
+  font-palette: --Black;
+  font-family: "Rocher";
+  border: 2px solid #1effb0;
+  cursor: pointer;
+  &:hover {
+    background-color: #1effb0;
+  }
+}
+/* Media Query */
+@media (max-width: 600px) {
+  #large-h1 {
+    font-size: 50px;
+  }
+  .whole {
+    background-size: cover;
+    height: 100vh;
+  }
+}
+@media (max-width: 376px) {
+  #large-h1 {
+    font-size: 40px;
+  }
+  .whole {
+    background-size: cover;
+  }
+  .play-button {
+    font-size: 20px;
+    width: 150px;
+  }
+}
+@media (max-width: 766px) {
+  #large-h1 {
+    font-size: 40px;
+  }
+  .whole {
+    background-size: cover;
+  }
+  .play-button {
+    font-size: 20px;
+    width: 150px;
+  }
+}
+@media (max-width: 426px) {
+  .forImage {
+    height: 102vh;
+  }
+  .questionBox {
+    height: 700px;
+    width: 190px;
+  }
+  .options .choose {
+    width: 100px;
+    font-size: 13px;
+  }
+  .instruct button {
+    font-size: 15px;
+  }
+  .toggleButton {
+    height: 30px;
+    width: 40px;
+  }
+  .circle {
+    height: 30px;
+    width: 30px;
+  }
+  .toggleButton.light .circle {
+    left: calc(90% - 40px);
+  }
+  .logo img {
+    height: 30px;
+  }
+  .logo span {
+    font-size: 25px;
+  }
+}
+@media (max-width: 326px) {
+  .questionColor {
+    font-size: 20px;
+  }
+  .questionBox {
+    height: 700px;
+    width: 190px;
+  }
+  .options {
+    gap: 0px;
+  }
+  .options .choose {
+    text-wrap: wrap;
+    width: 100px;
+    font-size: 13px;
+  }
+  .instruct button {
+    font-size: 15px;
+  }
+  .toggleButton {
+    height: 30px;
+    width: 40px;
+  }
+  .circle {
+    height: 30px;
+    width: 30px;
+  }
+  .toggleButton.light .circle {
+    left: calc(90% - 40px);
+  }
+  .result h3 {
+    font-size: 20px;
+  }
+  .result h2 {
+    font-size: 10px;
+  }
+  .logo img {
+    height: 30px;
+  }
+  .logo span {
+    font-size: 15px;
+  }
+}
